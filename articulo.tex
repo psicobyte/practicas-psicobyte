@@ -3,6 +3,8 @@
 \usepackage[utf8]{inputenc} % acentos sin codigo
 \usepackage{graphicx} % graficos 
 \usepackage[none]{hyphenat} % evitar separacióon de palabras entre lineas
+\usepackage{lscape} % para insertar páginas en horizontal
+\usepackage{multirow}
 %\usepackage{anysize} % para ajustar márgenes de página
 %\usepackage{afterpage}
 \hyphenation{po-ly-a-cry-la-mi-de} % configura cómo debe partirse siempre esta palabra
@@ -140,6 +142,30 @@ The number of apoptotic cells was determined by TUNEL assay in each hDPSC subcul
 \subsection{Western blot and inmunofluorescence}
 Selected apoptosis and proliferation markers were analyzed by western blot and inmunofluorescence. Caspase 4 expression (pro-apoptotic marker) was slightly higher on P16 to P20 as compared to P11 to P15, especially at the end of the experiment (P18 to P20). Inmunofluorescence staining revealed a positive cytoplasmic pattern of expression, mainly at P19. BCL7C protein, related with anti-apoptotic activity, also presented a cytoplasmic pattern by inmunofluorescence and its expression was higher during the first five subcultures (P11 to P15), mainly at P14 and P15, determined by western blot and inmunofluorescence, and after that, expression decreased to almost absence.
 PCNA is a well-known cell proliferation indicator. Its expression was higher at the beginning of the study (P11 to P15) and tended to slightly decrease as the hDPSC were subcultured (P16 to P20) (Figure 3B). Inmunofluorescence staining showed a typical nuclear pattern of expression mainly at P11, P13 and P15. Finally, telomerase activity determined by hTERT expression showed a slightly loss of expression at P17 and P19, as well as an increase at P15.
+
+\newpage
+
+\begin{landscape}
+\begin{table}[htb]
+\centering
+\begin{tabular}{cccccccccccc}
+\hline
+\multicolumn{2}{c}{\textbf{CELL PASSAGE}}                                                                                               & \textbf{P11} & \textbf{P12} & \textbf{P13} & \textbf{P14} & \textbf{P15} & \textbf{P16} & \textbf{P17} & \textbf{P18} & \textbf{P19} & \textbf{P20} \\ \hline
+
+\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}TRYPAN BLUE\\  (\%)\end{tabular}}}}  & \multicolumn{1}{c|}{Mean} & 92.54        & 87.89        & 89.56        & 88.24                            & 85.61                            & 85.88                            & 89.97                            & 91.15                            & 75.94                            & 75.50                            \\
+
+\multicolumn{1}{c|}{}                                                                                       & \multicolumn{1}{c|}{SD}   & 7.27         & 7.14         & 14.47        & 8.18                             & 6.62                             & 10.68                            & 7.68                             & 5.77                             & 23.09                            & 22.62                            \\ \cline{1-2}
+\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}WST-1\\ (Absorbance)\end{tabular}}}} & \multicolumn{1}{c|}{Mean} & 1.99         & 1.58         & 1.70         & 2.09                             & 1.93                             & 1.77                             & 1.83                             & 1.89                             & 1.79                             & 1.86                             \\
+\multicolumn{1}{c|}{}                                                                                       & \multicolumn{1}{c|}{SD}   & 0.44         & 0.75         & 0.63         & 0.29                             & 0.51                             & 0.59                             & 0.64                             & 0.49                             & 0.71                             & 0.72                             \\ \cline{1-2}
+\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}LIVE/DEAD\\ (\%)\end{tabular}}}}     & \multicolumn{1}{c|}{Mean} & 90.20        & 92.67        & 91.81        & 92.70                            & 91.52                            & 89.81                            & 91.13                            & 89.68                            & 87.67                            & 89.57                            \\
+\multicolumn{1}{c|}{}                                                                                       & \multicolumn{1}{c|}{SD}   & 7.63         & 5.63         & 3.33         & 3.41                             & 6.25                             & 4.74                             & 2.94                             & 9.64                             & 7.65                             & 5.69                             \\ \cline{1-2}
+\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}TUNEL\\ (\%)\end{tabular}}}}         & \multicolumn{1}{c|}{Mean} & 1.46         &              & 2.64         &                                  & 0.93                             &                                  & 7.21                             &                                  & 9.80                             &                                  \\
+\multicolumn{1}{c|}{}                                                                                       & \multicolumn{1}{c|}{SD}   & 0.32         &              & 2.09         &                                  & 0.38                             &                                  & 2.07                             &                                  & 6.08                             &                                  \\ \hline
+\end{tabular}
+\caption{Analysis of cell viability at successive hDPSC passages (P1 to P10) according to trypan blue exclusion test, WST-1 assay and LIVE/DEAD assay.}
+\label{Tabla 1}
+\end{table}
+\end{landscape}
 
 \section{Discussion}
 Lorem ipsum dolor\\
