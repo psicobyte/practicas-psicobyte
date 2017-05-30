@@ -2,11 +2,15 @@
 \usepackage[spanish]{babel} % espanol
 \usepackage[utf8]{inputenc} % acentos sin codigo
 \usepackage{graphicx} % graficos 
+\usepackage[none]{hyphenat} % evitar separacióon de palabras entre lineas
+%\usepackage{anysize} % para ajustar márgenes de página
+%\usepackage{afterpage}
+\hyphenation{po-ly-a-cry-la-mi-de} % configura cómo debe partirse siempre esta palabra
 \author{Miguel Ángel Martín Piedra}
 \title{Cell viability and proliferation capability of long-term human dental pulp stem cell cultures for use in tissue engineering.}
 \date{2014}
 \begin{document}
-
+\sloppy % justificación de párrafos
 \begin{titlepage}
 
 \begin{center}
@@ -48,16 +52,11 @@ Pablo Hinojosa \\
 $\ $
 \thispagestyle{empty} % para que no se numere esta pagina
 
-%\twocolumn[
-% Se aplica twocolumn en el texto, el preámbulo sólo tiene en cuenta que vas a usar el paquete, pero no lo aplica.
+
+
+%\twocolumn[ % Se aplica twocolumn en el texto, el preámbulo sólo tiene en cuenta que vas a usar el paquete, pero no lo aplica.
 %\begin{@twocolumnfalse}
-
-\tableofcontents % indice
-
-% Página en blanco
-\newpage
-$\ $
-\thispagestyle{empty} % para que no se numere esta pagina
+\tableofcontents
 
 \maketitle % título, autor y fecha
 \begin{abstract}
@@ -69,11 +68,16 @@ $\ $
 
 % @twocolumnfalse sirve para anular el formato de doble columna, para poner el título y el abstract, y luego se cierra @twocolumnfalse, para volver al modo twocolumn (lo que se hace es negar una afirmacion)
 
+%\marginsize{2.5cm}{2.5cm}{2cm}{4cm}
 \twocolumn
 \section{Introduction}
 Human dental pulp stem cells (hDPSC) have only become known from 2,000 on, and these cells have been deeply studied and characterized since then. hDPSC are considered to be the most feasible and promising stem cells derived from human teeth due to their biological properties, easy obtaining and for being present almost during the whole lifespan in the dental pulp of permanent human teeth. hDPSC are clonogenic and highly proliferative, even more than bone marrow mesenchymal stem cells. Furthermore, hDPSC are very similar to other adult mesenchymal stem cells regarding the positive expression of mesenchymal undifferentiation markers and the negative expression of CD45. hDPSC have high differentiation potential, showing great capabilities to differentiate to chondrogenic, osteogenic, adipogenic, but also neurogenic and even epithelial lineages. Because of this, these cells are globally considered as mesenchymal stem cells (MSC). As other stem cells, hDPSC are increasingly used in regenerative medicine, especially for the development of biological substitutes (artificial tissues) by Tissue Engineering (TE).\\
 In this regard, it is necessary to ensure the proliferative and regenerative potential of cells used in regenerative medicine and TE protocols in order to guarantee the success of these protocols. Therefore, evaluation of cell viability is one of the most important goals of the quality control process of cells used for the generation of artificial tissues. Moreover, understanding the specific cell death mechanisms that may occur during sequential cell culturing would contribute to a better selection of the most appropriate cell sources.\\
 Several methods have been used to the date to evaluate cell viability, ranging from commonly used methods based on the analysis of the integrity of the cell membrane using vital exclusion dyes such as trypan blue, to other assays focused on the study of cell metabolism such as AM calcein staining or WST-1 methods. One of the most interesting methods designed to evaluate cell viability is electron probe X-ray microanalysis (EPXMA), which allows the accurate determination of cell viability and the identification of the mechanisms underlying cell death by quantification of the ionic elements that play a key role in cell viability. This method has been extensively used for the study of cell viability of different cell types, including hDPSC.\\
+\begin{center}
+\includegraphics[width=6cm]{logo}
+\end{center}
+
 Adult stem cells cultured in laboratory for several passages tend to show a typical 3-steps cell viability profile as previously reported: (i) an initial adaptation to ex vivo cell culture conditions associated to a slight decrease of cell viability; (ii) an increasing  period, when cell viability rises and cells reach the top cell viability levels. Cells at this moment are recommended for use in regenerative medicine; and (iii) a decreasing phase, when cells tend to lose viability and cell death is present. It is not recommended to use cells at this period.\\
 hDPSC viability was recently studied during the first 10 cell subcultures by using an array of cell viability assays. However, hDPSC reached the top cell viability at the end of the study (passage 9). Thus, it is necessary to go further on this type of research and to analyze long-term hDPSC subcultures (beyond 10 passages) to determine if these passages are also suitable for clinical use, and because it is important to identify those subcultures in which cells undergo active cell death and the mechanisms underlying this process. Once the cell viability profile has been evaluated, researchers will be able to choose hDPSC subcultures with optimal cell viability and proliferation, as well as to discard low-viability subcultures for therapeutic use.\\
 The aim of this study was to evaluate the cell viability profile of long-term hDPSC subcultures (from 11th to 20th passages) to determine the putative usefulness of these cells and to identify the stage when hDPSC tend to lose cell viability. In addition, the mechanisms involved in cell death and its early indicators will be analyzed.
