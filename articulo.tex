@@ -1,4 +1,4 @@
-\documentclass[a4paper,twocolumn,12pt]{article}
+\documentclass[a4paper,12pt]{article}
 \usepackage[spanish]{babel} % espanol
 \usepackage[utf8]{inputenc} % acentos sin codigo
 \usepackage{graphicx} % graficos 
@@ -13,7 +13,7 @@
 \vspace*{-1in}
 \begin{figure}[htb]
 \begin{center}
-\includegraphics[width=8cm]{logo}
+\includegraphics[width=10cm]{logo}
 \end{center}
 \end{figure}
 
@@ -48,25 +48,28 @@ Pablo Hinojosa \\
 $\ $
 \thispagestyle{empty} % para que no se numere esta pagina
 
-\twocolumn[
+%\twocolumn[
 % Se aplica twocolumn en el texto, el preámbulo sólo tiene en cuenta que vas a usar el paquete, pero no lo aplica.
-\begin{@twocolumnfalse}
+%\begin{@twocolumnfalse}
 
 \tableofcontents % indice
 
-\pagebreak 
+% Página en blanco
+\newpage
+$\ $
+\thispagestyle{empty} % para que no se numere esta pagina
 
 \maketitle % título, autor y fecha
 \begin{abstract}
 \textbf{Background:} Evaluation of cell viability is one of the most important steps of the quality control process of cells used therapeutically. The aim of this study was to evaluate the long-term cell viability profile of human dental pulp stem cells (hDPSC) subcultures (beyond 10 passages) to determine which of these passages are suitable for clinical use, and to identify the cell death processes that may occur in the last passages. \textbf{Methods:} Four different cell viability assays were combined to determine the average cell viability levels (ACVL) at each cell passage: Trypan blue exclusion test, WST-1, LIVE/DEAD and electron probe X-ray microanalysis (EPXMA). Apoptosis was assessed by TUNEL assay and caspase 4 and BCL7C western blotting, and cell proliferation was analyzed by WST-1 and PCNA protein detection. \textbf{Results:} hDPSC showed high ACVL from passages P11 to P14, with adequate cytoplasmic and mitochondrial functionality at these subcultures. A non-significant trend to decreased cell proliferation was found from P16 to P20. EPXMA and TUNEL analyses suggest that a preapoptotic process could be activated from P15 to P20 (p$<$0.001), with a correlation with caspase 4 and BCL7C expression. \textbf{Conclusions:} hDPSC corresponding to passages P11 to P14 show adequate cell function, proliferation and viability. Therefore, these cells could be considered as potentially useful for clinical applications.\\
 \textbf{Keywords:} Cell viability, Dental pulp, Mesenchymal stem cells, Electron-probe X-ray microanalysis.
 \end{abstract}
-\end{@twocolumnfalse}
-]
+%\end{@twocolumnfalse}
+%]
 
 % @twocolumnfalse sirve para anular el formato de doble columna, para poner el título y el abstract, y luego se cierra @twocolumnfalse, para volver al modo twocolumn (lo que se hace es negar una afirmacion)
 
-
+\twocolumn
 \section{Introduction}
 Human dental pulp stem cells (hDPSC) have only become known from 2,000 on, and these cells have been deeply studied and characterized since then. hDPSC are considered to be the most feasible and promising stem cells derived from human teeth due to their biological properties, easy obtaining and for being present almost during the whole lifespan in the dental pulp of permanent human teeth. hDPSC are clonogenic and highly proliferative, even more than bone marrow mesenchymal stem cells. Furthermore, hDPSC are very similar to other adult mesenchymal stem cells regarding the positive expression of mesenchymal undifferentiation markers and the negative expression of CD45. hDPSC have high differentiation potential, showing great capabilities to differentiate to chondrogenic, osteogenic, adipogenic, but also neurogenic and even epithelial lineages. Because of this, these cells are globally considered as mesenchymal stem cells (MSC). As other stem cells, hDPSC are increasingly used in regenerative medicine, especially for the development of biological substitutes (artificial tissues) by Tissue Engineering (TE).\\
 In this regard, it is necessary to ensure the proliferative and regenerative potential of cells used in regenerative medicine and TE protocols in order to guarantee the success of these protocols. Therefore, evaluation of cell viability is one of the most important goals of the quality control process of cells used for the generation of artificial tissues. Moreover, understanding the specific cell death mechanisms that may occur during sequential cell culturing would contribute to a better selection of the most appropriate cell sources.\\
@@ -136,13 +139,6 @@ PCNA is a well-known cell proliferation indicator. Its expression was higher at 
 
 \section{Discussion}
 Lorem ipsum dolor\\
-\begin{table}
-{tabular}[cc|ccccc]{7}
-CELL PASSAGE & & P11 & P12 & P13 & P14 & P15 \\
-\hline
-& Mean $\pm$ SD & 92,54 $\pm$ 7,27 &  87,89 $\pm$ 7,14 & 89,46 $\pm$ 14,47 & 88,24 $\pm$ 8,18 & 85,21 $\pm$ 6,62 \\
-\hline
-\end{tabular}
-\end{table}
+
 
 \end{document}
