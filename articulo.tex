@@ -5,6 +5,7 @@
 \usepackage[none]{hyphenat} % evitar separacióon de palabras entre lineas
 \usepackage{lscape} % para insertar páginas en horizontal
 \usepackage{multirow}
+\usepackage{cite}
 %\usepackage{anysize} % para ajustar márgenes de página
 %\usepackage{afterpage}
 \hyphenation{po-ly-a-cry-la-mi-de} % configura cómo debe partirse siempre esta palabra
@@ -182,8 +183,8 @@ PCNA is a well-known cell proliferation indicator. Its expression was higher at 
 \end{landscape}
 
 \section{Discussion}
-Lorem ipsum dolor\\
-
-
+Lorem \cite{RN45} ipsum aemet\cite{RN394} dolor\\
+\bibliographystyle{vancouver}
+\bibliography{bibliografia}
 
 \end{document}
