@@ -1,11 +1,12 @@
 \documentclass[a4paper,12pt]{article}
-\usepackage[spanish]{babel} % espanol
+%\usepackage[spanish]{babel} % espanol
 \usepackage[utf8]{inputenc} % acentos sin codigo
 \usepackage{graphicx} % graficos 
-\usepackage[none]{hyphenat} % evitar separacióon de palabras entre lineas
+\usepackage[none]{hyphenat} % evitar separación de palabras entre lineas
 \usepackage{lscape} % para insertar páginas en horizontal
 \usepackage{multirow}
 \usepackage{cite}
+%\usepackage{tocbibind}
 %\usepackage{anysize} % para ajustar márgenes de página
 %\usepackage{afterpage}
 \hyphenation{po-ly-a-cry-la-mi-de} % configura cómo debe partirse siempre esta palabra
@@ -62,6 +63,9 @@ $\ $
 \tableofcontents
 
 \maketitle % título, autor y fecha
+
+\rule{120mm}{0.1mm}\\
+
 \begin{abstract}
 \textbf{Background:} Evaluation of cell viability is one of the most important steps of the quality control process of cells used therapeutically. The aim of this study was to evaluate the long-term cell viability profile of human dental pulp stem cells (hDPSC) subcultures (beyond 10 passages) to determine which of these passages are suitable for clinical use, and to identify the cell death processes that may occur in the last passages. \textbf{Methods:} Four different cell viability assays were combined to determine the average cell viability levels (ACVL) at each cell passage: Trypan blue exclusion test, WST-1, LIVE/DEAD and electron probe X-ray microanalysis (EPXMA). Apoptosis was assessed by TUNEL assay and caspase 4 and BCL7C western blotting, and cell proliferation was analyzed by WST-1 and PCNA protein detection. \textbf{Results:} hDPSC showed high ACVL from passages P11 to P14, with adequate cytoplasmic and mitochondrial functionality at these subcultures. A non-significant trend to decreased cell proliferation was found from P16 to P20. EPXMA and TUNEL analyses suggest that a preapoptotic process could be activated from P15 to P20 (p$<$0.001), with a correlation with caspase 4 and BCL7C expression. \textbf{Conclusions:} hDPSC corresponding to passages P11 to P14 show adequate cell function, proliferation and viability. Therefore, these cells could be considered as potentially useful for clinical applications.\\
 \textbf{Keywords:} Cell viability, Dental pulp, Mesenchymal stem cells, Electron-probe X-ray microanalysis.
@@ -188,6 +192,8 @@ Duis non nisi mollis, dignissim metus sit amet, ultricies enim. Praesent et ligu
 Curabitur semper luctus quam. Aenean vitae tellus et sem bibendum tincidunt at in nisi. In eget mi vel leo lacinia ornare in ac tellus. Sed vitae mi tempus, ullamcorper purus ac, porttitor tellus. Sed at rutrum mi. Aliquam quis rhoncus urna. Fusce lobortis mi tempus, porta enim sit amet, eleifend massa. In vitae eros tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper lobortis eros, sed vestibulum mauris scelerisque et. Vivamus suscipit interdum lorem, sed fringilla odio gravida a. Mauris ultrices sem metus, quis sodales erat lacinia ac \cite{RN632}. Maecenas imperdiet sollicitudin neque a interdum. Aenean dui velit, molestie quis ante eget, finibus egestas ex. Sed eros nunc, tristique in purus sit amet, tempus pellentesque purus. Aliquam libero odio, feugiat vitae commodo et, varius nec dolor.\\
 Nullam ullamcorper justo eu ullamcorper euismod. Nulla interdum augue laoreet, suscipit nunc non, gravida purus. Quisque sollicitudin mi eu justo consequat semper. Nullam malesuada vehicula dolor, luctus ornare mauris malesuada nec. Cras a tempus nisl \cite{RN398}. Curabitur et turpis diam. Nam porta lacinia nibh vitae tincidunt. Ut leo quam, aliquam sit amet mauris eget, convallis dictum odio \cite{RN1022}. Sed quis euismod nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam egestas tristique augue non suscipit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent bibendum rhoncus neque, sit amet elementum odio. Sed porta dui eu quam lobortis, ac bibendum ligula rutrum. Ut vel tellus quam \cite{RN635,RN1142}.\\
 Mauris non tristique eros. Ut ut lorem molestie felis placerat lobortis id vel nulla. Morbi auctor neque imperdiet sapien sollicitudin, id scelerisque velit feugiat. Suspendisse potenti. Donec sit amet tortor aliquam, volutpat ligula et, sagittis augue. Cras et molestie nibh. In mollis augue nisl, accumsan maximus nisi ultrices eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam iaculis sapien pharetra, eleifend orci faucibus, porttitor erat. Praesent varius leo velit, in iaculis orci tincidunt at. In sit amet tellus vestibulum sem tincidunt convallis sodales eu mi. Nam et posuere neque. In hac habitasse platea dictumst. Nam metus magna, lobortis a consectetur a, sollicitudin eu ipsum. Vestibulum a sodales tortor. Donec ornare, nulla at aliquet vehicula, sem metus pharetra lectus, at sollicitudin arcu elit et ligula.\\
+
+\addcontentsline{toc}{chapter}{References}
 \bibliographystyle{acm}
 \bibliography{bibliografia}
 
