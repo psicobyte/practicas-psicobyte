@@ -4,15 +4,17 @@
 \usepackage{graphicx} % graficos 
 \usepackage[none]{hyphenat} % evitar separación de palabras entre lineas
 \usepackage{lscape} % para insertar páginas en horizontal
+\usepackage{rotating}
 \usepackage{multirow}
 \usepackage{cite}
-%\usepackage{tocbibind}
+\usepackage{flushend}
 %\usepackage{anysize} % para ajustar márgenes de página
 %\usepackage{afterpage}
 \hyphenation{po-ly-a-cry-la-mi-de} % configura cómo debe partirse siempre esta palabra
 \author{Miguel Ángel Martín Piedra}
 \title{Cell viability and proliferation capability of long-term human dental pulp stem cell cultures for use in tissue engineering.}
-\date{2014}
+\date{2017}
+\addcontentsline{toc}{section}{References}
 \begin{document}
 \sloppy % justificación de párrafos
 \begin{titlepage}
@@ -164,6 +166,7 @@ PCNA is a well-known cell proliferation indicator. Its expression was higher at 
 
 \newpage
 
+
 \begin{landscape}
 \begin{table}[htb]
 \centering
@@ -184,6 +187,26 @@ PCNA is a well-known cell proliferation indicator. Its expression was higher at 
 \caption{Analysis of cell viability at successive hDPSC passages (P1 to P10) according to trypan blue exclusion test, WST-1 assay and LIVE/DEAD assay.}
 \label{Tabla 1}
 \end{table}
+
+\begin{table}[htb]
+\centering
+\begin{tabular}{cccccccccccc}
+\hline
+\multicolumn{2}{c}{\textbf{CELL PASSAGE}}                                                                                               & \textbf{P11} & \textbf{P12} & \textbf{P13} & \textbf{P14} & \textbf{P15} & \textbf{P16} & \textbf{P17} & \textbf{P18} & \textbf{P19} & \textbf{P20} \\ \hline
+
+\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}TRYPAN BLUE\\  (\%)\end{tabular}}}}  & \multicolumn{1}{c|}{Mean} & 92.54        & 87.89        & 89.56        & 88.24                            & 85.61                            & 85.88                            & 89.97                            & 91.15                            & 75.94                            & 75.50                            \\
+
+\multicolumn{1}{c|}{}                                                                                       & \multicolumn{1}{c|}{SD}   & 7.27         & 7.14         & 14.47        & 8.18                             & 6.62                             & 10.68                            & 7.68                             & 5.77                             & 23.09                            & 22.62                            \\ \cline{1-2}
+\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}WST-1\\ (Absorbance)\end{tabular}}}} & \multicolumn{1}{c|}{Mean} & 1.99         & 1.58         & 1.70         & 2.09                             & 1.93                             & 1.77                             & 1.83                             & 1.89                             & 1.79                             & 1.86                             \\
+\multicolumn{1}{c|}{}                                                                                       & \multicolumn{1}{c|}{SD}   & 0.44         & 0.75         & 0.63         & 0.29                             & 0.51                             & 0.59                             & 0.64                             & 0.49                             & 0.71                             & 0.72                             \\ \cline{1-2}
+\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}LIVE/DEAD\\ (\%)\end{tabular}}}}     & \multicolumn{1}{c|}{Mean} & 90.20        & 92.67        & 91.81        & 92.70                            & 91.52                            & 89.81                            & 91.13                            & 89.68                            & 87.67                            & 89.57                            \\
+\multicolumn{1}{c|}{}                                                                                       & \multicolumn{1}{c|}{SD}   & 7.63         & 5.63         & 3.33         & 3.41                             & 6.25                             & 4.74                             & 2.94                             & 9.64                             & 7.65                             & 5.69                             \\ \cline{1-2}
+\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}TUNEL\\ (\%)\end{tabular}}}}         & \multicolumn{1}{c|}{Mean} & 1.46         &              & 2.64         &                                  & 0.93                             &                                  & 7.21                             &                                  & 9.80                             &                                  \\
+\multicolumn{1}{c|}{}                                                                                       & \multicolumn{1}{c|}{SD}   & 0.32         &              & 2.09         &                                  & 0.38                             &                                  & 2.07                             &                                  & 6.08                             &                                  \\ \hline
+\end{tabular}
+\caption{Analysis of cell viability at successive hDPSC passages (P1 to P10) according to trypan blue exclusion test, WST-1 assay and LIVE/DEAD assay.}
+\label{Tabla 2}
+\end{table}
 \end{landscape}
 
 \section{Discussion}
@@ -193,7 +216,10 @@ Curabitur semper luctus quam. Aenean vitae tellus et sem bibendum tincidunt at i
 Nullam ullamcorper justo eu ullamcorper euismod. Nulla interdum augue laoreet, suscipit nunc non, gravida purus. Quisque sollicitudin mi eu justo consequat semper. Nullam malesuada vehicula dolor, luctus ornare mauris malesuada nec. Cras a tempus nisl \cite{RN398}. Curabitur et turpis diam. Nam porta lacinia nibh vitae tincidunt. Ut leo quam, aliquam sit amet mauris eget, convallis dictum odio \cite{RN1022}. Sed quis euismod nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam egestas tristique augue non suscipit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent bibendum rhoncus neque, sit amet elementum odio. Sed porta dui eu quam lobortis, ac bibendum ligula rutrum. Ut vel tellus quam \cite{RN635,RN1142}.\\
 Mauris non tristique eros. Ut ut lorem molestie felis placerat lobortis id vel nulla. Morbi auctor neque imperdiet sapien sollicitudin, id scelerisque velit feugiat. Suspendisse potenti. Donec sit amet tortor aliquam, volutpat ligula et, sagittis augue. Cras et molestie nibh. In mollis augue nisl, accumsan maximus nisi ultrices eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam iaculis sapien pharetra, eleifend orci faucibus, porttitor erat. Praesent varius leo velit, in iaculis orci tincidunt at. In sit amet tellus vestibulum sem tincidunt convallis sodales eu mi. Nam et posuere neque. In hac habitasse platea dictumst. Nam metus magna, lobortis a consectetur a, sollicitudin eu ipsum. Vestibulum a sodales tortor. Donec ornare, nulla at aliquet vehicula, sem metus pharetra lectus, at sollicitudin arcu elit et ligula.\\
 
-\addcontentsline{toc}{chapter}{References}
+\section{Acknowledgements}
+This study was supported by the Spanish Plan Nacional de Investigación Científica, Desarrollo e Innovación Tecnológica (I+D+I) from the National Ministry of Science and Innovation (Instituto de Salud Carlos III), grants FIS PI11/1582 and PI11/2668.
+
+%\addcontentsline{toc}{section}{References}
 \bibliographystyle{acm}
 \bibliography{bibliografia}
 
