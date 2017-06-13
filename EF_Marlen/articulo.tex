@@ -1,0 +1,122 @@
+\documentclass[10pt,twocolumn,a4paper]{article}
+\usepackage[utf8]{inputenc}			% texto formato utf8
+\usepackage{float}					% imagenes psosicion
+\usepackage{cite}					% bibliografia
+\usepackage[spanish]{babel}			% español
+\usepackage{graphicx} 				% graficos 
+\graphicspath{ {imagenes/} }			% path
+\title{\textbf{Cómo afecta el tamaño del problema y el número de procesos a la eficiencia de un algoritmo paralelo.}}
+\author{Marlene E. Vásquez Calero}
+\date{13 de Junio 2017}
+\begin{document}
+%-------------------------------------
+%		PORTADA
+%-------------------------------------
+\begin{titlepage}	
+	\begin{center}
+	\begin{figure}
+	\begin{center}
+	\includegraphics{aventur.jpg} \\ \
+	\end{center}
+	\end{figure}
+	\begin{large}
+	CURSO: \\ \ 
+	$\LaTeX$  y Git aplicado a la investigación científica. \\ \
+	\end{large}
+	%\maketitle 				% datos
+	\vspace*{0.3in}			
+	\rule{80mm}{0.1mm}\\ \
+	\vspace*{0.1in}
+	\begin{large}
+	Profesores: \\
+	Renato L. Ramirez Rivero \\
+	Angel P. Hinojosa Gutiérrez\\
+	\end{large}
+	\end{center}
+	\thispagestyle{empty}		% quitar numero de pagina	
+\end{titlepage}
+\newpage							% pagina en blanco
+$\ $
+\thispagestyle{empty} 			% quitar numero de pagina
+\twocolumn[
+	\begin{@twocolumnfalse}
+	\maketitle
+	\begin{abstract}
+	\textbf{ Se pretende demostrar por qué la eficiencia (E) tiende a aumentar al aumentar el tamaño del problema (N) y a disminuir al aumentar el número de procesos (P).}			
+	\end{abstract}
+	\begin{center}
+	\rule{80mm}{0.1mm}\\ \
+	\end{center}		
+	\end{@twocolumnfalse}
+]
+%-------------------------------------
+%		INTRODUCCION
+%-------------------------------------
+\section{Introducción}
+
+Curabitur cursus, nibh quis pulvinar iaculis, neque eros venenatis velit, non dictum elit magna id sem. Morbi sit amet consectetur dolor. Duis sagittis sodales facilisis. Sed in orci et est dapibus varius. Quisque malesuada non mi tristique lacinia. Mauris blandit, metus nec dictum convallis, dui lectus posuere orci, sed euismod ipsum dolor non felis. Nullam eget cursus ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam massa dolor, ultrices quis viverra eu, semper et mauris. Sed ligula turpis, sodales id placerat eu, imperdiet id nisl. Fusce porta ante mi. Fusce ac leo volutpat, posuere ex non, rhoncus sem. Phasellus fermentum laoreet sapien eu lobortis. Proin fermentum auctor ligula id faucibus. Integer ultricies mauris a nulla imperdiet facilisis. Sed suscipit sem eros, ut ullamcorper orci accumsan sit amet.
+
+Ut ac sem velit. Phasellus tincidunt justo sit amet dolor vulputate vulputate. Cras molestie turpis lorem, eu luctus libero mattis dapibus. Praesent tincidunt leo placerat commodo auctor. Nulla ut commodo dui, sit amet pretium urna. Praesent eget dui erat. Sed maximus dapibus augue. Praesent consectetur felis sapien, ut euismod ligula cursus id. Proin consequat, ligula eget posuere condimentum, ante augue mollis magna, a vehicula mi ligula ac metus. Sed a turpis tellus. Donec eget sem ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas vel eros congue, feugiat sem eu, tempor augue. Donec justo tellus, feugiat vel accumsan et, feugiat aliquam nisl. Aenean efficitur nibh at nisl bibendum, eget auctor elit sollicitudin. Praesent vitae consequat magna, vitae varius nibh.
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti. In elementum et risus a gravida. Curabitur auctor velit sit amet commodo semper. Sed scelerisque felis neque, at gravida sapien imperdiet id. Fusce dapibus aliquet urna et elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus in eros a ex varius sodales. Fusce viverra lacinia lectus eget faucibus. Etiam auctor scelerisque pretium. Quisque rhoncus tortor eu magna dictum eleifend. Nullam id neque leo. Suspendisse nec libero faucibus, efficitur ante in, tempus justo. Aenean a tellus purus. Proin nec malesuada nulla, vel dictum nulla.
+
+Ut vel dui eget dolor pretium convallis. Vestibulum ex est, ultricies a commodo id, imperdiet vel mi. Duis ultricies lectus quam, eget dapibus lorem semper ut. Suspendisse a orci commodo, congue eros vel, pellentesque diam. Maecenas eget quam mauris. Vivamus gravida dictum mauris a egestas. Ut ac metus enim. In elementum nisl quam, sit amet mollis libero lobortis vitae. Fusce mi ipsum, dignissim sagittis malesuada sit amet, iaculis et massa. Aliquam id accumsan orci.
+
+Nullam ac felis id diam elementum iaculis. Nulla dignissim quam id neque ullamcorper molestie. Praesent dictum tristique metus ut auctor. Aliquam ultrices lectus vitae mollis pretium. Quisque condimentum tempus efficitur. Proin quis ante justo. Fusce dictum in ex non facilisis. Vestibulum vitae lorem lacinia, efficitur neque ac, rhoncus enim. In egestas urna ac blandit congue. Duis a dui velit. Pellentesque nec dolor tempor, mollis diam nec, aliquam mauris. Aliquam erat volutpat. Integer eu malesuada ipsum, eu ullamcorper eros.
+
+Maecenas eget leo eu ante ullamcorper porta. Cras leo turpis, fermentum sit amet urna quis, luctus lobortis est. Integer nec nulla lectus. Mauris vestibulum sem a purus vulputate, ut ultricies turpis rutrum. Nam in fringilla nulla. Praesent eget neque ornare, posuere diam vitae, aliquam mi. Nam ornare enim id ante auctor sodales eget sit amet elit. Phasellus egestas, leo facilisis cursus dictum, dolor eros aliquam mauris, ac dictum leo urna in nisl. Cras et tellus maximus, eleifend ligula sed, pharetra leo. Ut hendrerit sollicitudin dolor id condimentum. Donec consectetur eu ante ut rhoncus.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=3cm, width=3cm]{grafico}
+\caption{Escalabilidad}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=3cm, width=4cm]{grafico3}
+\caption{Escalabilidad}
+\end{center}
+\end{figure}
+Nullam ac felis id diam elementum iaculis. Nulla dignissim quam id neque ullamcorper molestie. Praesent dictum tristique metus ut auctor. Aliquam ultrices lectus vitae mollis pretium. Quisque condimentum tempus efficitur. Proin quis ante justo. Fusce dictum in ex non facilisis. Vestibulum vitae lorem lacinia, efficitur neque ac, rhoncus enim. In egestas urna ac blandit congue. Duis a dui velit. Pellentesque nec dolor tempor, mollis diam nec, aliquam mauris. Aliquam erat volutpat. Integer eu malesuada ipsum, eu ullamcorper eros.
+
+Maecenas eget leo eu ante ullamcorper porta. Cras leo turpis, fermentum sit amet urna quis, luctus lobortis est. Integer nec nulla lectus. Mauris vestibulum sem a purus vulputate, ut ultricies turpis rutrum. Nam in fringilla nulla. Praesent eget neque ornare, posuere diam vitae, aliquam mi. Nam ornare enim id ante auctor sodales eget sit amet elit. Phasellus egestas, leo facilisis cursus dictum, dolor eros aliquam mauris, ac dictum leo urna in nisl. Cras et tellus maximus, eleifend ligula sed, pharetra leo. Ut hendrerit sollicitudin dolor id condimentum. Donec consectetur eu ante ut rhoncus.
+
+Nullam ac felis id diam elementum iaculis. Nulla dignissim quam id neque ullamcorper molestie. Praesent dictum tristique metus ut auctor. Aliquam ultrices lectus vitae mollis pretium. Quisque condimentum tempus efficitur. Proin quis ante justo. Fusce dictum in ex non facilisis. Vestibulum vitae lorem lacinia, efficitur neque ac, rhoncus enim. In egestas urna ac blandit congue. Duis a dui velit. Pellentesque nec dolor tempor, mollis diam nec, aliquam mauris. Aliquam erat volutpat. Integer eu malesuada ipsum, eu ullamcorper eros.
+
+Maecenas eget leo eu ante ullamcorper porta. Cras leo turpis, fermentum sit amet urna quis, luctus lobortis est. Integer nec nulla lectus. Mauris vestibulum sem a purus vulputate, ut ultricies turpis rutrum. Nam in fringilla nulla. Praesent eget neque ornare, posuere diam vitae, aliquam mi. Nam ornare enim id ante auctor sodales eget sit amet elit. Phasellus egestas, leo facilisis cursus dictum, dolor eros aliquam mauris, ac dictum leo urna in nisl. Cras et tellus maximus, eleifend ligula sed, pharetra leo. Ut hendrerit sollicitudin dolor id condimentum. Donec consectetur eu ante ut rhoncus.
+%-------------------------------------
+%		DEMOSTRACION
+%-------------------------------------
+\section{Demostración}
+Nullam ac felis id diam elementum iaculis. Nulla dignissim quam id neque ullamcorper molestie. Praesent dictum tristique metus ut auctor. Aliquam ultrices lectus vitae mollis pretium. Quisque condimentum tempus efficitur. Proin quis ante justo. Fusce dictum in ex non facilisis. Vestibulum vitae lorem lacinia, efficitur neque ac, rhoncus enim. In egestas urna ac blandit congue. Duis a dui velit. Pellentesque nec dolor tempor, mollis diam nec, aliquam mauris. Aliquam erat volutpat. Integer eu malesuada ipsum, eu ullamcorper eros.
+
+
+\subsection{Modelo matemático}
+Maecenas eget leo eu \cite{Almeida2008}ante ullamcorper porta. Cras leo turpis, fermentum sit amet urna quis, luctus lobortis est. Integer nec nulla lectus. Mauris vestibulum sem a purus vulputate, ut ultricies turpis rutrum. Nam in fringilla nulla. Praesent eget neque ornare, posuere diam vitae, aliquam mi. Nam ornare enim id ante auctor sodales eget sit amet elit. Phasellus egestas, leo facilisis cursus dictum, dolor eros aliquam mauris, ac dictum leo urna in nisl. Cras et tellus maximus, eleifend ligula sed, pharetra leo. Ut hendrerit sollicitudin dolor id condimentum. Donec consectetur eu ante ut rhoncus.
+\begin{equation}
+	f(N,P) = \frac{N^{3}}{N^{3} + P + 2PN^{2}}
+\end{equation}
+
+\subsection{Mediciones y resultados}
+
+Maecenas eget leo eu ante ullamcorper porta. Cras leo turpis, fermentum sit amet urna quis, luctus lobortis est. Integer nec nulla lectus. Mauris vestibulum sem a purus vulputate, ut ultricies turpis rutrum. Nam in fringilla nulla. Praesent eget neque ornare, posuere diam vitae, aliquam mi. Nam ornare enim id ante auctor sodales eget sit amet elit. Phasellus egestas, leo facilisis cursus dictum, dolor eros aliquam mauris, ac dictum leo urna in nisl. Cras et tellus maximus, eleifend ligula sed, pharetra leo. Ut hendrerit sollicitudin dolor id condimentum. Donec consectetur eu ante ut rhoncus.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=3cm, width=5cm]{grafico4}
+\caption{Escalabilidad}
+\end{center}
+\end{figure}
+%-------------------------------------
+%		CONCLUSION
+%-------------------------------------
+\section{Conclusión}
+Maecenas eget leo eu ante ullamcorper porta. Cras leo turpis, fermentum sit amet urna quis, luctus lobortis est. Integer nec nulla lectus. Mauris vestibulum sem a purus vulputate, ut ultricies turpis rutrum. Nam in fringilla nulla. Praesent eget neque ornare, posuere diam vitae, aliquam mi. Nam ornare enim id ante auctor sodales eget sit amet elit. Phasellus egestas, leo facilisis cursus dictum, dolor eros aliquam mauris, ac dictum leo urna in nisl. Cras et tellus maximus, eleifend ligula sed, pharetra leo. Ut hendrerit sollicitudin dolor id condimentum. Donec consectetur eu ante ut rhoncus.
+%-------------------------------------
+%		BIBLIOGRAFIA
+%-------------------------------------
+\bibliography{bibliografia}
+\bibliographystyle{plain}
+\end{document}
