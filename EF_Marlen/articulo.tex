@@ -1,11 +1,11 @@
 \documentclass[10pt,twocolumn,a4paper]{article}
-\usepackage[utf8]{inputenc}			% texto formato utf8
-\usepackage{float}					% imagenes psosicion
-\usepackage{cite}					% bibliografia
-\usepackage[spanish,es-tabla]{babel}	% idioma
-\usepackage{graphicx} 				% graficos 
-\graphicspath{ {imagenes/} }			% path
-\usepackage{multirow} 				% tablas
+\usepackage[utf8]{inputenc}				% texto formato utf8
+\usepackage{float}						% imagenes psosicion
+\usepackage{cite}						% bibliografia
+\usepackage[spanish,es-tabla]{babel}		% idioma
+\usepackage{graphicx} 					% graficos 
+\graphicspath{ {imagenes/} }				% path
+\usepackage{multirow} 					% tablas
 \title{\textbf{Cómo afecta el tamaño del problema y el número de procesos a la eficiencia de un algoritmo paralelo.}}
 \author{Marlene E. Vásquez Calero}
 \date{13 de Junio 2017}
@@ -36,18 +36,17 @@
 	\thispagestyle{empty}		% quitar numero de pagina	
 \end{titlepage}
 %-------------------------------------
-\thispagestyle{empty} 
+\thispagestyle{empty} 			% quitar numero de pagina
 %\pagestyle{empty}
 \newpage	
 $\ $
-			% quitar numero de pagina
 
 %-------------------------------------
 \twocolumn[
 	\begin{@twocolumnfalse}
 	\maketitle
 	\begin{abstract}
-	\textbf{ Se pretende demostrar por qué la eficiencia (E) tiende a aumentar al aumentar el tamaño del problema (N) y a disminuir al aumentar el número de procesos (P).}			
+	\textit{ Se pretende demostrar por qué la eficiencia (E) tiende a aumentar al aumentar el tamaño del problema (N) y a disminuir al aumentar el número de procesos (P).}			
 	\end{abstract}
 	\begin{center}
 	\rule{80mm}{0.1mm}\\ \
@@ -59,7 +58,8 @@ $\ $
 %-------------------------------------
 \section{Introducción}
 
-Curabitur cursus, nibh quis pulvinar iaculis, neque eros venenatis velit, non dictum elit magna id sem. Morbi sit amet consectetur dolor. Duis sagittis sodales facilisis. Sed in orci et est dapibus varius. 
+El aprovechamiento del potencial de los sistemas paralelos requiere disponer de fundamentos de diseño e implementación de software paralelo, tanto para sistemas distribuidos como para sistemas paralelos de memoria compartida.\\
+Ya que existen aplicaciones con elevados requisitos de cómputo que requieren software para plataformas multiprocesador.\\ Es por ello que se pretende demostrar por qué la eficiencia (E) tiende a aumentar al aumentar el tamaño del problema (N) y a disminuir al aumentar el número de procesos (P).
 %-------------------------------------
 %		DEMOSTRACION
 %-------------------------------------
@@ -68,7 +68,7 @@ Curabitur cursus, nibh quis pulvinar iaculis, neque eros venenatis velit, non di
 %		SUBSECTION
 %-------------------------------------
 \subsection{Modelo matemático}
-Para demostrarlo se va a plantear un ejemplo y se utilizará el del \textbf{algoritmo del patrón de nueve puntos} \cite{Almeida2008} \textbf{la matriz tiene el mismo tamaño en todas las direcciones} (NxNxN). Este algoritmo realiza operaciones sobre una matriz 3D y para computar cada punto hace falta conocer el valor de sus vecinos de arriba y abajo, dos a la izquierda, dos a la derecha, dos hacia delante y dos hacia atrás, además del propio punto (Figura \ref{fig:nuevePuntos}).
+Para demostrarlo se va a plantear un ejemplo y se utilizará el del \textbf{algoritmo del patrón de nueve puntos} \cite{Almeida2008} \textbf{la matriz tiene el mismo tamaño en todas las direcciones} (NxNxN). \\ Este algoritmo realiza operaciones sobre una matriz 3D y para computar cada punto hace falta conocer el valor de sus vecinos de arriba y abajo, dos a la izquierda, dos a la derecha, dos hacia delante y dos hacia atrás, además del propio punto (Figura \ref{fig:nuevePuntos}).
 \begin{figure}[H]
 \begin{center}
 	\includegraphics[height=2cm, width=6cm]{nuevePuntos}
